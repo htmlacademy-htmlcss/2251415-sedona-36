@@ -175,11 +175,6 @@ body {
   text-align: center;
 }
 
-.subscribe-title,
-.subscribe-text {
-  color: #ffffff;
-}
-
 .subscribe-home {
   color: #ffffff;
 
@@ -187,6 +182,16 @@ body {
   background-image: url("../images/newsletter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.subscribe-text {
+  margin-bottom: 55px;
+
+  color: #333333;
+}
+
+.subscribe-home .subscribe-text {
+  color: #ffffff;
 }
 
 .subscribe-button {
@@ -332,10 +337,4 @@ body {
   color: #000000;
 
   background-color: transparent;
-}
-
-.page-title-catalog,
-.page-text-catalog {
-  text-align: center;
-  color: #000000;
 }
