@@ -167,7 +167,35 @@ body {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  background-color: #615048;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #756157;
+}
+
 .button-light {
+  background-color: #82b3d3;
+}
+
+.button-light:hover {
+  background-color: #68a2ca;
+}
+
+.button-light:focus {
+  background-color: #68a2ca;
+}
+
+.button-light:active {
+  color: rgba(255, 255, 255, 0.3);
+
   background-color: #82b3d3;
 }
 
@@ -493,6 +521,18 @@ body {
   margin-bottom: 39px;
 }
 
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .breadcrumbs-item {
   position: relative;
 
@@ -595,7 +635,7 @@ body {
 }
 
 .filter-control-input[type="checkbox"]:checked {
-  background-image: url("../images/icon-check.svg");
+  background-image: url("../images/check.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -773,18 +813,6 @@ body {
   border-radius: 4px;
 }
 
-.view-link-tile {
-  background-image: url("../images/view-tile.svg");
-}
-
-.view-link-slideshow {
-  background-image: url("../images/view-preview.svg");
-}
-
-.view-link-list {
-  background-image: url("../images/view-list.svg");
-}
-
 .view-link-active {
   border: 2px solid #000000;
 }
@@ -915,6 +943,20 @@ body {
   border-radius: 4px;
 }
 
+.pagination-link:hover {
+  background-color: #68a2ca;
+}
+
+.pagination-link:focus {
+  background-color: #68a2ca;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #82b3d3;
+}
+
 .pagination-link-current {
   color: #000000;
 
@@ -949,12 +991,36 @@ body {
   text-decoration: none;
 }
 
+.footer-phone:hover {
+  fill: #756157;
+}
+
+.footer-phone:focus {
+  fill: #756157;
+}
+
+.footer-phone:active {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 .footer-developer {
   display: block;
   width: 115px;
   height: 33px;
 
   color: #000000;
+}
+
+.footer-developer:hover {
+  fill: #756157;
+}
+
+.footer-developer:focus {
+  fill: #756157;
+}
+
+.footer-developer:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .social {
@@ -964,6 +1030,8 @@ body {
 }
 
 .social-link {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -971,4 +1039,28 @@ body {
   height: 40px;
 
   color: #83b3d3;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin: auto;
+
+  fill: #dbdbdb;
+}
+
+.social-link:hover .social-icon {
+  fill: #68a2ca;
+}
+
+.social-link:focus .social-icon {
+  fill: #68a2ca;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
