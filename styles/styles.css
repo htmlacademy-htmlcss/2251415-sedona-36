@@ -100,13 +100,11 @@ body {
 }
 
 .navigation-logo:hover {
-  width: 160px;
-  height: 80px;
+  opacity: 0.6;
 }
 
 .navigation-logo:focus {
-  width: 160px;
-  height: 80px;
+  opacity: 0.6;
 }
 
 .navigation-logo:active {
@@ -190,10 +188,7 @@ body {
   fill: currentColor;
 }
 
-.navigation-user-link :hover {
-  width: 25px;
-  height: 25px;
-
+.navigation-user-link:hover {
   color: #756157;
 }
 
@@ -572,12 +567,27 @@ body {
 
 .form-input:focus {
   background-color: #e6e6e6;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
-.form-input:active {
-  background-color: #f2f2f2;
-  border: 2px solid #000000;
+.form-input:focus:not(:placeholder-shown) {
+  outline: 2px solid #000000;
+}
+
+.form-input:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+.form-input-valid {
+  background-color: #ffffff;
+  border: 2px solid #7db54f;
+}
+
+.form-input-error {
+  border: 2px solid #ff5757;
 }
 
 .subscribe-input {
@@ -715,22 +725,6 @@ body {
   grid-template-columns: auto 1fr;
 }
 
-.filter-control-label {
-  line-height: 23px;
-}
-
-.filter-control-label:hover {
-  opacity: 0.3;
-}
-
-.filter-control-label:focus {
-  border: 3px solid #83b3d3;
-}
-
-.filter-control-label:active {
-  opacity: 0.5;
-}
-
 .filter-control-input {
   position: relative;
 
@@ -744,16 +738,25 @@ body {
   appearance: none;
 }
 
-.filter-control-input:hover {
-  opacity: 0.3;
+.filter-control-input:hover,
+.filter-control-input:hover + .filter-control-label {
+  opacity: 0.6;
 }
 
 .filter-control-input:focus {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
-.filter-control-input:active {
-  opacity: 0.5;
+.filter-control-input:active,
+.filter-control-input:active + .filter-control-label {
+  opacity: 0.3;
+}
+
+.filter-control-input:disabled,
+.filter-control-input:disabled + .filter-control-label {
+  opacity: 0.3;
+
+  pointer-events: none;
 }
 
 .filter-control-input[type="checkbox"]:checked {
@@ -870,17 +873,25 @@ body {
 }
 
 .filter-toggle-item:hover {
-  background-color: #e6e6e6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .filter-toggle-item:focus {
-  background-color: #e6e6e6;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .filter-toggle-item:active {
-  background-color: #f2f2f2;
-  border: 2px solid #000000;
+  outline: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.filter-toggle-item:disabled {
+  color: #ffffff;
+
+  background-color: #e5e5e5;
+
+  pointer-events: none;
 }
 
 .filter-button {
@@ -1042,13 +1053,11 @@ body {
 }
 
 .hotels-img:hover {
-  width: 325px;
-  height: 230px;
+  opacity: 0.6;
 }
 
 .hotels-img:focus {
-  width: 325px;
-  height: 230px;
+  opacity: 0.6;
 }
 
 .hotels-img:active {
