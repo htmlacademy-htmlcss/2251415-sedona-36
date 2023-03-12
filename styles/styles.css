@@ -36,8 +36,8 @@ body {
 
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1200px;
+  width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
 
   font-style: normal;
@@ -49,6 +49,13 @@ body {
 
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  max-width: 100%;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .visually-hidden {
@@ -120,6 +127,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 600px;
   margin-left: 28px;
 }
 
@@ -481,6 +489,11 @@ body {
   display: none;
 }
 
+.advantages-list-services .advantages-title {
+  margin-bottom: 29px;
+  padding-bottom: 0;
+}
+
 .search {
   padding: 96px 70px;
 
@@ -535,14 +548,6 @@ body {
 
 .subscribe-home .subscribe-text {
   color: #ffffff;
-}
-
-.subscribe-form {
-  display: grid;
-  max-width: 684px;
-  margin: 0 auto;
-
-  grid-template-columns: 1fr 232px;
 }
 
 .form-input {
@@ -605,6 +610,15 @@ body {
   border: 2px solid #ff5757;
 }
 
+.subscribe-form {
+  display: grid;
+  align-items: start;
+  max-width: 684px;
+  margin: 0 auto;
+
+  grid-template-columns: 1fr 232px;
+}
+
 .subscribe-input {
   height: 52px;
 
@@ -614,7 +628,8 @@ body {
 }
 
 .subscribe-button {
-  padding: 6px;
+  margin: 0;
+  padding: 8px;
 
   font-size: 20px;
   line-height: 36px;
@@ -1042,6 +1057,7 @@ body {
 
 .hotels-item {
   display: grid;
+  align-items: start;
   padding: 20px;
 
   border: 1px solid #e6e6e6;
